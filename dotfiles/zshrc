@@ -1,6 +1,10 @@
-alias p="cd ~/Documents/Projects"
 alias c="open $1 -a \"Visual Studio Code\""
 
+alias p="cd ~/Documents/Projects"
+
 alias ga="git add"
+alias gb="git branch"
 alias gc="git commit"
+alias gpl="git pull"
 alias gp="git push"
+alias gs="git status"
