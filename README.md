@@ -9,7 +9,7 @@ xcode-select --install
 2. Clone repo into new hidden directory.
 
 ```zsh
-git clone https://github.com/stay-js/dotfiles ~/.dotfiles
+git clone https://github.com/stay-js/dotfiles.git ~/.dotfiles
 ```
 
 3. Make install.sh executable.
