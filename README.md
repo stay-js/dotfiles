@@ -9,10 +9,6 @@ xcode-select --install
 2. Clone repo into new hidden directory.
 
 ```zsh
-# Use SSH (if set up)...
-git clone git@github.com:stay-js/.dotfiles.git ~/.dotfiles
-
-# ...or use HTTPS and switch remotes later.
 git clone https://github.com/stay-js/.dotfiles.git ~/.dotfiles
 ```
 
