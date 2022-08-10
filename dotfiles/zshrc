@@ -12,3 +12,12 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gp="git push"
 alias gs="git status"
+
+# yarn
+alias ya="yarn add"
+alias yb="yarn build"
+alias yd="yarn dev"
+alias yi="yarn install"
+alias yl="yarn lint"
+alias ylp="yarn lint:fix"
+alias yu="yarn upgrade-interactive --latest"
