@@ -2,6 +2,10 @@ alias c="open $1 -a \"Visual Studio Code\""
 
 alias p="cd ~/Documents/Projects"
 
+# reinstall next.js app
+alias rna="rm -rf node_modules yarn.lock .next && yarn install"
+
+# git
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit"
