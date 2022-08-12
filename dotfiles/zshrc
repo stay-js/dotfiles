@@ -22,3 +22,8 @@ alias yl="yarn lint"
 alias ylf="yarn lint:fix"
 alias yr="yarn remove"
 alias yu="yarn upgrade-interactive --latest"
+
+# ip
+alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
+alias ipv4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
+alias ipv6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
