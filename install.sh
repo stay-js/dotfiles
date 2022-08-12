@@ -10,4 +10,8 @@ echo "Installing Homebrew and Homebrew packages..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --file ~/.dotfiles/Brewfile
 
+echo "Installing global npm packages..."
+npm install --global npm@latest
+npm install --global yarn typescript nodemon
+
 echo "Completed!"
