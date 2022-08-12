@@ -1,6 +1,6 @@
 alias c="open $1 -a \"Visual Studio Code\""
 
-alias p="cd ~/Documents/Projects"
+alias p="cd ~/Projects"
 
 # reinstall next.js app
 alias rna="rm -rf node_modules yarn.lock .next && yarn install"
