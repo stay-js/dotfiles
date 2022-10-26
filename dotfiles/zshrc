@@ -23,6 +23,10 @@ alias ylf="yarn lint:fix"
 alias yr="yarn remove"
 alias yu="yarn upgrade-interactive --latest"
 
+# brew
+alias bu="brew update && brew upgrade && brew cleanup && brew doctor"
+alias bbd="brew bundle dump --force"
+
 # ip
 alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
 alias ipv4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
