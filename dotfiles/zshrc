@@ -1,3 +1,12 @@
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+export LDFLAGS="-L/opt/homebrew/opt/node@18/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@18/include"
+
 alias c="open $1 -a \"Visual Studio Code\""
 
 alias p="cd ~/Projects"
@@ -30,4 +39,4 @@ alias bbd="brew bundle dump --force"
 # ip
 alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
 alias ipv4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
-alias ipv6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
+alias ipv6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"export PATH="/opt/homebrew/opt/node@18/bin:$PATH"

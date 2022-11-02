@@ -9,7 +9,7 @@ brew "gh"
 brew "git"
 brew "mysql-client"
 brew "neofetch"
-brew "node@16"
+brew "nvm"
 brew "youtube-dl"
 brew "planetscale/tap/pscale"
 
