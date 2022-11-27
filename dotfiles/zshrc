@@ -28,7 +28,7 @@ alias yb="yarn build"
 alias yd="yarn dev"
 alias yi="yarn install"
 alias yl="yarn lint"
-alias ylf="yarn lint:fix"
+alias ylf="yarn lint --fix"
 alias yr="yarn remove"
 alias yu="yarn upgrade-interactive --latest"
 
