@@ -37,6 +37,6 @@ alias bu="brew update && brew upgrade && brew cleanup && brew doctor"
 alias bbd="brew bundle dump --force"
 
 # ip
-alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
-alias ipv4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
-alias ipv6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias ipv4="curl -4 icanhazip.com"
+alias ipv6="curl -6 icanhazip.com"
