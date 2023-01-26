@@ -7,9 +7,21 @@ export NVM_DIR="$HOME/.nvm"
 export LDFLAGS="-L/opt/homebrew/opt/node@18/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@18/include"
 
+# bat
+export BAT_THEME="ansi"
+export BAT_STYLE="numbers,changes"
+
+alias cat='bat'
+
+# projects
+alias p="cd ~/Projects"
+
+# trash
+alias rm='trash'
+
+# open vscode faster
 alias c="open $1 -a 'Visual Studio Code'"
 
-alias p="cd ~/Projects"
 
 # reinstall node app
 alias rna='rm -rf node_modules yarn.lock .next dist tsconfig.tsbuildinfo && yarn install'
