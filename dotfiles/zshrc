@@ -11,8 +11,8 @@ alias c="open $1 -a 'Visual Studio Code'"
 
 alias p="cd ~/Projects"
 
-# reinstall next.js app
-alias rna="rm -rf node_modules yarn.lock .next && yarn install"
+# reinstall node app
+alias rna='rm -rf node_modules yarn.lock .next dist tsconfig.tsbuildinfo && yarn install'
 
 # git
 alias ga='git add'
@@ -34,8 +34,7 @@ alias gl="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 alias gcan='gc --amend --no-edit'
-
-alias gp="git push -u 2>&1 | tee >(cat) | grep \"pull/new\" | awk '{print \$2}' | xargs open"
+alias gp="git push"
 alias gpf='git push --force-with-lease'
 
 # yarn
