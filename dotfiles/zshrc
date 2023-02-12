@@ -20,7 +20,19 @@ alias c="open $1 -a 'Visual Studio Code'"
 
 
 # reinstall node app
-alias rna='rm -rf node_modules yarn.lock .next dist tsconfig.tsbuildinfo && yarn install'
+rna () {
+	if [[ -z "$1" ]]; then
+		rm -rf node_modules yarn.lock
+	elif [[ $1 == 'next' ]]; then
+		rm -rf node_modules yarn.lock .next
+	elif [[ $1 == 'astro' ]]; then
+		rm -rf node_modules yarn.lock dist
+	elif [[ $1 == 'vite' ]]; then
+		rm -rf node_modules yarn.lock dist tsconfig.tsbuildinfo
+	fi
+
+	yarn install
+}
 
 # git
 alias ga='git add'
