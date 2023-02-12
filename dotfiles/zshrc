@@ -56,8 +56,11 @@ alias yr='yarn remove'
 alias yu='yarn upgrade-interactive --latest'
 
 # brew
-alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
+alias bi='brew install'
 alias bbd='brew bundle dump --force'
+alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
+alias br='brew remove'
+
 
 # ip
 alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
