@@ -1,3 +1,9 @@
+# rust
+export OPENSSL_DIR=$(brew --prefix openssl)
+export PKG_CONFIG_PATH=/opt/homebrew/opt/openssl/lib/pkgconfig cargo build
+
+alias mb='make build'
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s '/opt/homebrew/opt/nvm/nvm.sh' ] && \. '/opt/homebrew/opt/nvm/nvm.sh'
