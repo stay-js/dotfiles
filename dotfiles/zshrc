@@ -1,6 +1,6 @@
 # rust
 export OPENSSL_DIR=$(brew --prefix openssl)
-export PKG_CONFIG_PATH=/opt/homebrew/opt/openssl/lib/pkgconfig cargo build
+export PKG_CONFIG_PATH='/opt/homebrew/opt/openssl/lib/pkgconfig cargo build'
 
 alias mb='make build'
 
@@ -26,20 +26,28 @@ alias c="open $1 -a 'Visual Studio Code'"
 
 
 # reinstall node app
-rna () {
+remove-packages () {
 	if [[ -z "$1" ]]; then
-		rm -rf node_modules yarn.lock
+		rm -rf node_modules
 	elif [[ $1 == 'next' ]]; then
-		rm -rf node_modules yarn.lock .next
+		rm -rf node_modules .next
 	elif [[ $1 == 'astro' ]]; then
-		rm -rf node_modules yarn.lock dist
+		rm -rf node_modules dist
 	elif [[ $1 == 'vite' ]]; then
-		rm -rf node_modules yarn.lock dist tsconfig.tsbuildinfo
+		rm -rf node_modules dist tsconfig.tsbuildinfo
 	elif [[ $1 == 'sls' ]]; then
-		rm -rf node_modules yarn.lock build .serverless
+		rm -rf node_modules build .serverless
 	fi
+}
 
+rna () {
+  remove-packages $1
 	yarn install
+}
+
+prna () {
+  remove-packages $1
+	pnpm install
 }
 
 # git
@@ -69,12 +77,27 @@ alias gpf='git push --force-with-lease'
 alias ya='yarn add'
 alias yb='yarn build'
 alias yd='yarn dev'
-alias ydep='yarn deploy'
 alias yi='yarn install'
 alias yl='yarn lint'
 alias ylf='yarn lint --fix'
 alias yr='yarn remove'
 alias yu='yarn upgrade-interactive --latest'
+
+# pnpm
+export PNPM_HOME="/Users/stay/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+alias pa='pnpm add'
+alias pb='pnpm build'
+alias pd='pnpm dev'
+alias pi='pnpm install'
+alias pl='pnpm lint'
+alias plf='pnpm lint --fix'
+alias pr='pnpm remove'
+alias pu='pnpm update'
 
 # brew
 alias bi='brew install'
