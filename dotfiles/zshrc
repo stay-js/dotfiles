@@ -42,12 +42,14 @@ remove-packages () {
 
 rna () {
   remove-packages $1
-	yarn install
+  rm -rf pnpm-lock.yaml
+	pnpm install
 }
 
-prna () {
+yrna () {
   remove-packages $1
-	pnpm install
+  rm -rf yarn.lock
+	yarn install
 }
 
 # git
