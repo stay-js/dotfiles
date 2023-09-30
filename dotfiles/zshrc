@@ -113,9 +113,5 @@ alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0
 alias ipv4='curl -4 icanhazip.com'
 alias ipv6='curl -6 icanhazip.com'
 
-# ls
-alias l='exa -lah'
-alias ls=exa
-
 # reload
 alias reload='source ~/.zshrc'
