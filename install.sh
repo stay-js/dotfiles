@@ -16,6 +16,6 @@ nvm use 18
 
 echo "Installing global npm packages..."
 npm install --global npm@latest
-npm install --global yarn@latest typescript@latest nodemon@latest
+npm install --global yarn@latest pnpm@latest typescript@latest ts-node@latest nodemon@latest
 
 echo "Completed!"
