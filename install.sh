@@ -11,8 +11,8 @@ echo "Installing Homebrew and Homebrew packages..."
 brew bundle --file ~/.dotfiles/Brewfile
 
 echo "Installing Node..."
-nvm install 18
-nvm use 18
+nvm install 20
+nvm use 20
 
 echo "Installing global npm packages..."
 npm install --global npm@latest

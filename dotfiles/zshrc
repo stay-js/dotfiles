@@ -15,6 +15,10 @@ export BAT_STYLE='numbers,changes'
 
 alias cat='bat'
 
+# ls
+alias l='exa -lah'
+alias ls='exa'
+
 # projects
 alias p='cd ~/Projects'
 
