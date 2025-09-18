@@ -4,6 +4,10 @@ export PKG_CONFIG_PATH='/opt/homebrew/opt/openssl/lib/pkgconfig cargo build'
 
 alias mb='make build'
 
+# docker
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s '/opt/homebrew/opt/nvm/nvm.sh' ] && \. '/opt/homebrew/opt/nvm/nvm.sh'
@@ -16,8 +20,8 @@ export BAT_STYLE='numbers,changes'
 alias cat='bat'
 
 # ls
-alias l='exa -lah'
-alias ls='exa'
+alias l='eza -lah'
+alias ls='eza'
 
 # projects
 alias p='cd ~/Projects'
@@ -111,7 +115,6 @@ alias bbd='brew bundle dump --force'
 alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
 alias br='brew remove'
 
-
 # ip
 alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ipv4='curl -4 icanhazip.com'
@@ -119,3 +122,10 @@ alias ipv6='curl -6 icanhazip.com'
 
 # reload
 alias reload='source ~/.zshrc'
+
+# bun completions
+[ -s "/Users/stay/.bun/_bun" ] && source "/Users/stay/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
