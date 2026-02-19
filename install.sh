@@ -11,11 +11,11 @@ echo "Installing Homebrew and Homebrew packages..."
 brew bundle --file ~/.dotfiles/Brewfile
 
 echo "Installing Node..."
-nvm install 20
-nvm use 20
+nvm install --lts
+nvm use --lts
 
 echo "Installing global npm packages..."
 npm install --global npm@latest
-npm install --global yarn@latest pnpm@latest typescript@latest ts-node@latest nodemon@latest
+npm install --global pnpm@latest
 
 echo "Completed!"

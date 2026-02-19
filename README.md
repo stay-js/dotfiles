@@ -12,14 +12,8 @@ xcode-select --install
 git clone https://github.com/stay-js/dotfiles.git ~/.dotfiles
 ```
 
-3. Make install.sh executable.
+3. Run install.sh.
 
 ```bash
-chmod +x ~/.dotfiles/install.sh
-```
-
-4. Run install.sh.
-
-```bash
-~/.dotfiles/install.sh
+bash ~/.dotfiles/install.sh
 ```
