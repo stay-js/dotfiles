@@ -1,3 +1,8 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 # rust
 export OPENSSL_DIR=$(brew --prefix openssl)
 export PKG_CONFIG_PATH='/opt/homebrew/opt/openssl/lib/pkgconfig cargo build'
@@ -6,7 +11,6 @@ alias mb='make build'
 
 # docker
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -32,34 +36,6 @@ alias rm='trash'
 # open vscode faster
 alias c="open $1 -a 'Visual Studio Code'"
 
-
-# reinstall node app
-remove-packages () {
-	if [[ -z "$1" ]]; then
-		rm -rf node_modules
-	elif [[ $1 == 'next' ]]; then
-		rm -rf node_modules .next
-	elif [[ $1 == 'astro' ]]; then
-		rm -rf node_modules dist
-	elif [[ $1 == 'vite' ]]; then
-		rm -rf node_modules dist tsconfig.tsbuildinfo
-	elif [[ $1 == 'sls' ]]; then
-		rm -rf node_modules build .serverless
-	fi
-}
-
-rna () {
-  remove-packages $1
-  rm -rf pnpm-lock.yaml
-	pnpm install
-}
-
-yrna () {
-  remove-packages $1
-  rm -rf yarn.lock
-	yarn install
-}
-
 # git
 alias ga='git add'
 alias gb='git branch'
@@ -83,16 +59,6 @@ alias gcan='gc --amend --no-edit'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 
-# yarn
-alias ya='yarn add'
-alias yb='yarn build'
-alias yd='yarn dev'
-alias yi='yarn install'
-alias yl='yarn lint'
-alias ylf='yarn lint --fix'
-alias yr='yarn remove'
-alias yu='yarn upgrade-interactive --latest'
-
 # pnpm
 export PNPM_HOME="/Users/stay/Library/pnpm"
 case ":$PATH:" in
@@ -115,6 +81,13 @@ alias bbd='brew bundle dump --force'
 alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
 alias br='brew remove'
 
+# just
+alias j='just'
+alias jl='just --list'
+alias jb='just build'
+alias jd='just dev'
+alias je='just exec'
+
 # ip
 alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ipv4='curl -4 icanhazip.com'
@@ -129,3 +102,4 @@ alias reload='source ~/.zshrc'
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
