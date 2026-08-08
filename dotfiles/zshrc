@@ -9,13 +9,11 @@ export PKG_CONFIG_PATH='/opt/homebrew/opt/openssl/lib/pkgconfig cargo build'
 
 alias mb='make build'
 
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # docker
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s '/opt/homebrew/opt/nvm/nvm.sh' ] && \. '/opt/homebrew/opt/nvm/nvm.sh'
-[ -s '/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm' ] && \. '/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm'
 
 # bat
 export BAT_THEME='ansi'
@@ -103,3 +101,11 @@ alias reload='source ~/.zshrc'
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/stay/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
