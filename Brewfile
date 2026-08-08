@@ -1,78 +1,150 @@
-tap "cargo-lambda/cargo-lambda"
+tap "cargo-lambda/tap", "https://github.com/cargo-lambda/homebrew-tap.git", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "planetscale/tap"
 tap "terror/tap"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
-brew "python@3.12"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# .NET Core
 brew "dotnet"
-brew "eza"
+# Fast and simple Node.js version manager
 brew "fnm"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Handy way to save and run project-specific commands
 brew "just"
+# Open source relational database management system
 brew "mysql-client"
+# Fast, highly customisable system info script
 brew "neofetch"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# General-purpose scripting language
 brew "php"
+# Utilities for manipulating PostScript documents
 brew "psutils"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Cross-platform application and UI framework
 brew "qt@5"
+# Build applications with serverless architectures
 brew "serverless"
+# Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# CLI tool that moves files or folder to the trash
 brew "trash", link: true
+# Download YouTube videos from the command-line
 brew "youtube-dl"
-brew "cargo-lambda/cargo-lambda/cargo-lambda"
-brew "planetscale/tap/pscale"
-brew "terror/tap/just-lsp"
+# High-performance theorem prover
+brew "z3"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Cargo Lambda is a Cargo subcommand to help you work with AWS Lambda.
+brew "cargo-lambda/tap/cargo-lambda"
+# The PlanetScale CLI
+brew "planetscale/tap/pscale", trusted: true
+# Language server for just
+brew "terror/tap/just-lsp", trusted: true
+# Enable Windows-like alt-tab
 cask "alt-tab"
+# Allows connection to a computer remotely
 cask "anydesk"
+# Chromium based browser
 cask "arc"
+# Web browser focusing on privacy
 cask "brave-browser"
+# Open source IDE for exploring and testing APIs
 cask "bruno"
+# Hardware benchmarking utility
 cask "cinebench"
+# Universal database tool and SQL client
 cask "dbeaver-community"
+# Collaborative team software
 cask "figma"
+# Web browser
 cask "firefox"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
 cask "google-chrome"
+# Free and open-source media player
 cask "iina"
+# Tool to optimise images to a smaller size
 cask "imageoptim"
+# Custom Discord client
 cask "legcord"
+# Software for Logitech devices
 cask "logi-options+"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
 cask "mac-mouse-fix"
+# Clipboard manager
 cask "maccy"
+# Full TeX Live distribution with GUI applications
 cask "mactex"
-cask "messenger"
+# Utility to extend trackpad functionality
 cask "middleclick"
+# Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
+# Password manager
 cask "nordpass"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Calculator and converter application
 cask "numi"
+# Replacement for Docker Desktop
 cask "orbstack"
+# Remote desktop
 cask "parsec"
+# IDE for professional Python development
 cask "pycharm"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# .NET IDE
 cask "rider"
+# Emoji picker optimised for blind people
 cask "rocket"
+# Rust IDE
 cask "rustrover"
+# Screenshot measurement and annotation tool
 cask "shottr"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# System monitor for the menu bar
 cask "stats"
+# Disposable email client
 cask "tempbox"
+# Tool to hide menu bar icons
 cask "vanilla"
+# Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
 cask "warp"
+# Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen"
 vscode "akamud.vscode-theme-onelight"
 vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
@@ -91,7 +163,6 @@ vscode "fill-labs.dependi"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "foxundermoon.shell-format"
-vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
@@ -151,3 +222,4 @@ vscode "yzane.markdown-pdf"
 vscode "zhuangtongfa.material-theme"
 go "golang.org/x/tools/gopls"
 go "honnef.co/go/tools/cmd/staticcheck"
+npm "corepack"
